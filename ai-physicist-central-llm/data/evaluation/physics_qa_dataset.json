@@ -1,0 +1,14 @@
+{
+  "physics_qa_dataset": [
+    {
+      "id": 1,
+      "question": "Calculate the period of a pendulum with length 2m",
+      "answer": "2.84 seconds"
+    },
+    {
+      "id": 2,
+      "question": "State Newton's second law",
+      "answer": "F = ma"
+    }
+  ]
+}
