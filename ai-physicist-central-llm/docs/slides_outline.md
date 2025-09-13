@@ -111,11 +111,7 @@ Physics Problem Types vs Error Rates (Baseline LLM)
 
 **Quantitative Results:**
 ```
-[Bar Chart]
-         Baseline | +RAG | +Tools | +LoRA
-Accuracy:   42%   | 59%  |  71%   | 73%
-Units OK:   31%   | 45%  |  89%   | 91%
-Math OK:    39%   | 51%  |  84%   | 86%
+ ![Error Analysis](docs/images/error_chart4.png)
 ```
 
 **Qualitative Example:**
