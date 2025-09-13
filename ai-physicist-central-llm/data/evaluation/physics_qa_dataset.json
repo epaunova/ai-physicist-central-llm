@@ -1,4 +1,4 @@
-cat > data/evaluation/physics_qa_dataset.json << 'EOF'
+
 {
   "physics_qa_dataset": [
     {
