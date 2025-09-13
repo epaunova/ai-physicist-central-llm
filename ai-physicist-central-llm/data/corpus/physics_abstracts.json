@@ -1,1 +1,94 @@
-
+cat > data/corpus/physics_abstracts.json << 'EOF'
+[
+  {
+    "id": "doc_001",
+    "title": "Newton's Laws of Motion",
+    "content": "Newton's second law states that F = ma, where F is the net force applied to an object in Newtons (N), m is the mass in kilograms (kg), and a is the acceleration in meters per second squared (m/s²). This fundamental equation relates force, mass, and acceleration.",
+    "category": "classical_mechanics"
+  },
+  {
+    "id": "doc_002", 
+    "title": "Simple Pendulum",
+    "content": "The period of a simple pendulum for small angle oscillations is given by T = 2π√(L/g), where L is the length of the pendulum in meters, g is the gravitational acceleration (9.81 m/s² on Earth), and T is the period in seconds.",
+    "category": "classical_mechanics"
+  },
+  {
+    "id": "doc_003",
+    "title": "Kinetic Energy",
+    "content": "Kinetic energy is the energy of motion, given by KE = ½mv², where m is mass in kilograms and v is velocity in meters per second. The units of kinetic energy are Joules (J), which equals kg⋅m²/s².",
+    "category": "classical_mechanics"
+  },
+  {
+    "id": "doc_004",
+    "title": "Coulomb's Law",
+    "content": "Coulomb's law describes the electrostatic force between two charged particles: F = k(q₁q₂/r²), where k = 8.99×10⁹ N⋅m²/C² is Coulomb's constant, q₁ and q₂ are charges in Coulombs, and r is the distance in meters.",
+    "category": "electromagnetism"
+  },
+  {
+    "id": "doc_005",
+    "title": "Electric Field",
+    "content": "The electric field E at a distance r from a point charge q is given by E = kq/r², where k is Coulomb's constant. Electric field has units of N/C (Newtons per Coulomb) or equivalently V/m (Volts per meter).",
+    "category": "electromagnetism"
+  },
+  {
+    "id": "doc_006",
+    "title": "Magnetic Field",
+    "content": "Magnetic field B due to a current I at distance r is given by B = μ₀I/(2πr), where μ₀ = 4π×10⁻⁷ T⋅m/A is the permeability of free space. Magnetic field is measured in Tesla (T) or Weber per square meter (Wb/m²).",
+    "category": "electromagnetism"
+  },
+  {
+    "id": "doc_007",
+    "title": "Ideal Gas Law",
+    "content": "The ideal gas law relates pressure, volume, and temperature: PV = nRT, where P is pressure in Pascals, V is volume in m³, n is the number of moles, R = 8.314 J/(mol⋅K) is the gas constant, and T is temperature in Kelvin.",
+    "category": "thermodynamics"
+  },
+  {
+    "id": "doc_008",
+    "title": "Carnot Efficiency",
+    "content": "The Carnot efficiency represents the maximum theoretical efficiency of a heat engine: η = 1 - T_cold/T_hot, where temperatures must be in Kelvin. This gives the upper limit of efficiency for any heat engine operating between two temperatures.",
+    "category": "thermodynamics"
+  },
+  {
+    "id": "doc_009",
+    "title": "Heisenberg Uncertainty Principle",
+    "content": "The Heisenberg uncertainty principle states that ΔxΔp ≥ ℏ/2, where Δx is the uncertainty in position, Δp is the uncertainty in momentum, and ℏ = h/2π = 1.055×10⁻³⁴ J⋅s is the reduced Planck constant.",
+    "category": "quantum_mechanics"
+  },
+  {
+    "id": "doc_010",
+    "title": "De Broglie Wavelength",
+    "content": "The de Broglie wavelength associates a wavelength with any particle: λ = h/p = h/(mv), where h = 6.626×10⁻³⁴ J⋅s is Planck's constant, p is momentum, m is mass, and v is velocity.",
+    "category": "quantum_mechanics"
+  },
+  {
+    "id": "doc_011",
+    "title": "Aharonov-Bohm Effect",
+    "content": "The Aharonov-Bohm effect demonstrates that charged particles are affected by electromagnetic potentials even in regions where both the magnetic field B and electric field E are zero. This shows the fundamental role of the vector potential in quantum mechanics.",
+    "category": "quantum_mechanics"
+  },
+  {
+    "id": "doc_012",
+    "title": "Conservation of Energy",
+    "content": "Energy cannot be created or destroyed, only converted from one form to another. Total energy E = KE + PE, where KE is kinetic energy and PE is potential energy. In isolated systems, total energy remains constant.",
+    "category": "classical_mechanics"
+  },
+  {
+    "id": "doc_013",
+    "title": "Faraday's Law",
+    "content": "Faraday's law of electromagnetic induction states that the induced electromotive force (EMF) is equal to the negative rate of change of magnetic flux: ε = -dΦ/dt, where Φ is magnetic flux in Weber (Wb).",
+    "category": "electromagnetism"
+  },
+  {
+    "id": "doc_014",
+    "title": "Planck's Constant",
+    "content": "Planck's constant h = 6.626×10⁻³⁴ J⋅s relates energy and frequency in quantum mechanics: E = hf. Its dimensions are [M L² T⁻¹], representing action or angular momentum.",
+    "category": "quantum_mechanics"
+  },
+  {
+    "id": "doc_015",
+    "title": "Heat Capacity",
+    "content": "Heat capacity relates heat transfer to temperature change: Q = mcΔT, where Q is heat in Joules, m is mass in kg, c is specific heat capacity in J/(kg⋅K), and ΔT is temperature change in Kelvin or Celsius.",
+    "category": "thermodynamics"
+  }
+]
+EOF
