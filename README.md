@@ -142,7 +142,7 @@ Questions types:
 
 - [Technical Note](docs/tech_note.md) - Detailed methodology and results
 - [Slides](docs/slides_outline.md) - Presentation outline
-- [API Documentation](docs/api.md) - Component interfaces
+
 
 ## 🤝 Contributing
 
