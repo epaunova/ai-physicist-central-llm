@@ -1,14 +1,186 @@
+cat > data/evaluation/physics_qa_dataset.json << 'EOF'
 {
   "physics_qa_dataset": [
     {
       "id": 1,
-      "question": "Calculate the period of a pendulum with length 2m",
-      "answer": "2.84 seconds"
+      "category": "mechanics",
+      "type": "numerical",
+      "question": "Calculate the period of a simple pendulum with length 2 meters on Earth.",
+      "answer": "2.84 seconds",
+      "solution": "T = 2π√(L/g) = 2π√(2/9.81) = 2.84 s",
+      "units_required": ["seconds", "s"]
     },
     {
       "id": 2,
-      "question": "State Newton's second law",
-      "answer": "F = ma"
+      "category": "mechanics",
+      "type": "conceptual",
+      "question": "State Newton's second law of motion.",
+      "answer": "F = ma",
+      "solution": "Force equals mass times acceleration",
+      "units_required": ["N", "kg⋅m/s²"]
+    },
+    {
+      "id": 3,
+      "category": "mechanics",
+      "type": "numerical",
+      "question": "Calculate the kinetic energy of a 5 kg object moving at 10 m/s.",
+      "answer": "250 J",
+      "solution": "KE = ½mv² = 0.5 × 5 × 10² = 250 J",
+      "units_required": ["J", "Joules", "kg⋅m²/s²"]
+    },
+    {
+      "id": 4,
+      "category": "mechanics",
+      "type": "dimensional",
+      "question": "What are the dimensions of momentum?",
+      "answer": "[M L T⁻¹]",
+      "solution": "p = mv → [M][L T⁻¹] = [M L T⁻¹]",
+      "units_required": ["kg⋅m/s"]
+    },
+    {
+      "id": 5,
+      "category": "em",
+      "type": "conceptual",
+      "question": "State Coulomb's law for the force between two charges.",
+      "answer": "F = k(q₁q₂/r²)",
+      "solution": "Force is proportional to product of charges, inversely proportional to distance squared",
+      "units_required": ["N", "C", "m"]
+    },
+    {
+      "id": 6,
+      "category": "em",
+      "type": "numerical",
+      "question": "Calculate the electric field 1 meter from a 1 μC point charge.",
+      "answer": "8990 N/C",
+      "solution": "E = kq/r² = 8.99×10⁹ × 10⁻⁶ / 1² = 8990 N/C",
+      "units_required": ["N/C", "V/m"]
+    },
+    {
+      "id": 7,
+      "category": "thermo",
+      "type": "numerical",
+      "question": "Calculate the Carnot efficiency for a heat engine operating between 600K and 300K.",
+      "answer": "50% or 0.5",
+      "solution": "η = 1 - T_cold/T_hot = 1 - 300/600 = 0.5",
+      "units_required": ["%", "dimensionless"]
+    },
+    {
+      "id": 8,
+      "category": "thermo",
+      "type": "conceptual",
+      "question": "State the ideal gas law.",
+      "answer": "PV = nRT",
+      "solution": "Pressure × Volume = moles × gas constant × Temperature",
+      "units_required": ["Pa", "m³", "mol", "K"]
+    },
+    {
+      "id": 9,
+      "category": "quantum",
+      "type": "conceptual",
+      "question": "State the Heisenberg uncertainty principle.",
+      "answer": "ΔxΔp ≥ ℏ/2",
+      "solution": "Product of position and momentum uncertainties is at least ℏ/2",
+      "units_required": ["J⋅s"]
+    },
+    {
+      "id": 10,
+      "category": "quantum",
+      "type": "conceptual",
+      "question": "Explain the Aharonov-Bohm effect.",
+      "answer": "Quantum particles are affected by electromagnetic potentials even where fields are zero",
+      "solution": "Demonstrates non-local nature of electromagnetic interaction in quantum mechanics",
+      "units_required": []
+    },
+    {
+      "id": 11,
+      "category": "mechanics",
+      "type": "numerical",
+      "question": "A car accelerates from 0 to 30 m/s in 5 seconds. What is the acceleration?",
+      "answer": "6 m/s²",
+      "solution": "a = Δv/Δt = 30/5 = 6 m/s²",
+      "units_required": ["m/s²"]
+    },
+    {
+      "id": 12,
+      "category": "em",
+      "type": "dimensional",
+      "question": "What are the units of magnetic field strength?",
+      "answer": "Tesla or Wb/m²",
+      "solution": "B = F/(qv) → [Force]/[Charge][Velocity] = Tesla",
+      "units_required": ["T", "Tesla", "Wb/m²"]
+    },
+    {
+      "id": 13,
+      "category": "thermo",
+      "type": "numerical",
+      "question": "How much heat is needed to raise 2 kg of water from 20°C to 80°C?",
+      "answer": "502.8 kJ",
+      "solution": "Q = mcΔT = 2 × 4186 × 60 = 502,320 J",
+      "units_required": ["J", "kJ"]
+    },
+    {
+      "id": 14,
+      "category": "waves",
+      "type": "numerical",
+      "question": "What is the frequency of light with wavelength 500 nm?",
+      "answer": "6 × 10¹⁴ Hz",
+      "solution": "f = c/λ = 3×10⁸ / 500×10⁻⁹",
+      "units_required": ["Hz", "THz"]
+    },
+    {
+      "id": 15,
+      "category": "quantum",
+      "type": "dimensional",
+      "question": "What are the dimensions of Planck's constant?",
+      "answer": "[M L² T⁻¹]",
+      "solution": "From E = hf: h = E/f = [M L² T⁻²]/[T⁻¹] = [M L² T⁻¹]",
+      "units_required": ["J⋅s"]
+    },
+    {
+      "id": 16,
+      "category": "mechanics",
+      "type": "numerical",
+      "question": "Calculate the gravitational force between Earth (6×10²⁴ kg) and Moon (7.3×10²² kg) at distance 3.8×10⁸ m.",
+      "answer": "2.0 × 10²⁰ N",
+      "solution": "F = GMm/r² = 6.67×10⁻¹¹ × 6×10²⁴ × 7.3×10²² / (3.8×10⁸)²",
+      "units_required": ["N"]
+    },
+    {
+      "id": 17,
+      "category": "em",
+      "type": "numerical",
+      "question": "Calculate the capacitance of a parallel plate capacitor with area 0.01 m² and separation 1 mm.",
+      "answer": "88.5 pF",
+      "solution": "C = ε₀A/d = 8.85×10⁻¹² × 0.01 / 0.001",
+      "units_required": ["F", "pF"]
+    },
+    {
+      "id": 18,
+      "category": "mechanics",
+      "type": "dimensional",
+      "question": "What are the dimensions of angular momentum?",
+      "answer": "[M L² T⁻¹]",
+      "solution": "L = r × p = [L] × [M L T⁻¹] = [M L² T⁻¹]",
+      "units_required": ["kg⋅m²/s"]
+    },
+    {
+      "id": 19,
+      "category": "em",
+      "type": "conceptual",
+      "question": "What is Faraday's law of electromagnetic induction?",
+      "answer": "ε = -dΦ/dt",
+      "solution": "Induced EMF equals negative rate of change of magnetic flux",
+      "units_required": ["V", "Wb/s"]
+    },
+    {
+      "id": 20,
+      "category": "quantum",
+      "type": "numerical",
+      "question": "Calculate the de Broglie wavelength of an electron moving at 10⁶ m/s.",
+      "answer": "7.27 × 10⁻¹⁰ m",
+      "solution": "λ = h/(mv) = 6.626×10⁻³⁴/(9.11×10⁻³¹ × 10⁶)",
+      "units_required": ["m", "nm"]
     }
   ]
 }
+EOF
