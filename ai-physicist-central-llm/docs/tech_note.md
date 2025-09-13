@@ -1,6 +1,6 @@
 # Specializing Large Language Models for Physics: A Modular Brain-and-Hands Architecture
 
-**Author:** Eva [Last Name]  
+**Author:** Eva Paunova  
 **Date:** September 2024  
 **FirstPrinciples AI - Technical Interview Assignment**
 
