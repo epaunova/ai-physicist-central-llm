@@ -1,1 +1,10 @@
-
+__pycache__/
+*.py[cod]
+.env
+.vscode/
+.idea/
+*.log
+.DS_Store
+data/results/*.csv
+models/
+*.bin
