@@ -111,7 +111,7 @@ Physics Problem Types vs Error Rates (Baseline LLM)
 
 **Quantitative Results:**
 ```
- ![Error Analysis](docs/images/error_chart4.png)
+ ![Error Analysis](docs/visualizations/error_analysis.html)
 ```
 
 **Qualitative Example:**
