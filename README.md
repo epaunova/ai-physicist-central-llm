@@ -139,7 +139,7 @@ Questions types:
 ## 📄 Documentation
 
 - [Technical Note](docs/tech_note.md) - Detailed methodology and results
-- [Slides](docs/slides_outline.md) - Presentation outline
+- [Slides Outline](docs/slides_outline.md)- Presentation outline
 
 
 ## 🤝 Contributing
