@@ -20,15 +20,6 @@ git clone https://github.com/epaunova/ai-physicist-central-llm.git
 cd ai-physicist-central-llm
 pip install -r requirements.txt
 
-Option 1: Run the demo script
-cd scripts
-python demo.py
-
-Option 2: Open the Jupyter demo
-cd notebooks
-jupyter notebook demo.ipynb
-
-
 ## 🏗️ Architecture
 
 ```
