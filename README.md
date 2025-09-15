@@ -142,12 +142,9 @@ Questions types:
 - [ ] Expansion to graduate-level physics
 - [ ] RLHF for physics-specific alignment
 
-## 📄 Documentation
-
 ## Documentation
-- [Technical Note](/docs/tech_note.md)
-- [Slides Outline](/docs/slides_outline.md)
-
+[Technical Note](docs/tech_note.md)
+[Slides Outline](docs/slides_outline.md)
 
 ## 🤝 Contributing
 
