@@ -41,10 +41,12 @@ This project demonstrates a modular approach to specializing large language mode
 
 ### Installation
 ```bash
-git clone https://github.com/epaunova/ai-physicist-central-llm.git
+# Clone repository
+git clone https://github.com/yourusername/ai-physicist-central-llm.git
 cd ai-physicist-central-llm
-pip install -r requirements.txt
 
+# Install dependencies
+pip install -r requirements.txt
 
 # Download physics corpus
 python scripts/download_corpus.py
@@ -74,6 +76,11 @@ print(response)
 ```
 
 ## 📊 Evaluation Results
+
+
+   ![Error Analysis](docs/images/error_chart.png)
+   ![Error Analysis](docs/images/error_chart2.png)
+   ![Error Analysis](docs/images/error_chart3.png)
 
 | Model Configuration | Accuracy | Unit Consistency | Computation Correct |
 |-------------------|----------|------------------|-------------------|
@@ -139,7 +146,7 @@ Questions types:
 ## 📄 Documentation
 
 - [Technical Note](docs/tech_note.md) - Detailed methodology and results
-- [Slides Outline](docs/slides_outline.md)- Presentation outline
+- [Slides](docs/slides_outline.md) - Presentation outline
 
 
 ## 🤝 Contributing
