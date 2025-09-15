@@ -143,8 +143,8 @@ Questions types:
 - [ ] RLHF for physics-specific alignment
 
 ## Documentation
-- [Technical Note](docs/tech_note.md)
-- [Slides Outline](docs/slides_outline.md)
+- [Technical Note](ai-physicist-central-llm/docs/slides_outline.md)
+- [Slides Outline](ai-physicist-central-llm/docs/tech_note.md)
 
 
 ## 🤝 Contributing
