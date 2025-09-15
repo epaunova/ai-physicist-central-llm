@@ -145,8 +145,12 @@ Questions types:
 ## 📄 Documentation
 
 ## Documentation
-- [Technical Note](./docs/tech_note.md)
-- [Slides Outline](./docs/slides_outline.md)
+- [Technical Note](/docs/tech_note.md)
+- [Slides Outline](/docs/slides_outline.md)
+
+## Architecture
+![Architecture](/docs/images/architecture.png)
+
 
 
 ## 🤝 Contributing
