@@ -12,14 +12,6 @@ This project demonstrates a modular approach to specializing large language mode
 - **Symbolic Computation**: Integration with SymPy for exact calculations
 - **Unit Validation**: Physical consistency checking
 
-## 🚀 Getting Started
-
-Clone the repository and install requirements:
-```bash
-git clone https://github.com/epaunova/ai-physicist-central-llm.git
-cd ai-physicist-central-llm
-pip install -r requirements.txt
-
 ## 🏗️ Architecture
 
 ```
