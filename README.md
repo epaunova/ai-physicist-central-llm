@@ -144,8 +144,9 @@ Questions types:
 
 ## 📄 Documentation
 
-- [Technical Note](docs/tech_note.md) - Detailed methodology and results
-- [Slides](docs/slides_outline.md) - Presentation outline
+## Documentation
+- [Technical Note](./docs/tech_note.md)
+- [Slides Outline](./docs/slides_outline.md)
 
 
 ## 🤝 Contributing
