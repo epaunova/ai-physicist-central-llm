@@ -148,10 +148,6 @@ Questions types:
 - [Technical Note](/docs/tech_note.md)
 - [Slides Outline](/docs/slides_outline.md)
 
-## Architecture
-![Architecture](/docs/images/architecture.png)
-
-
 
 ## 🤝 Contributing
 
