@@ -42,7 +42,7 @@ This project demonstrates a modular approach to specializing large language mode
 ### Installation
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/ai-physicist-central-llm.git
+git clone https://github.com/epaunova/ai-physicist-central-llm.git
 cd ai-physicist-central-llm
 
 # Install dependencies
