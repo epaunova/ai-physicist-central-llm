@@ -77,8 +77,8 @@ print(response)
 
 ## 📊 Evaluation Results
 
-   ![Error Analysis](ai-physicist-central-llm/docs/visualizations/error_analysis.html)
-   ![Error Analysis](ai-physicist-central-llm/docs/visualizations/error_analysis2.html)
+   ![Error Analysis](ai-physicist-central-llm/docs/visualizations/error_chart.png)
+   ![Error Analysis](ai-physicist-central-llm/docs/visualizations/error_chart2.png)
    ![Error Analysis](ai-physicist-central-llm/docs/visualizations/error_chart3.png)
 
 | Model Configuration | Accuracy | Unit Consistency | Computation Correct |
