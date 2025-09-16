@@ -12,30 +12,33 @@ This project demonstrates a modular approach to specializing large language mode
 - **Symbolic Computation**: Integration with SymPy for exact calculations
 - **Unit Validation**: Physical consistency checking
 
+---
+
 ## 🏗️ Architecture
 
-```
 ┌─────────────────────────────────────────────────┐
-│                  User Query                      │
+│ User Query │
 └────────────────────┬────────────────────────────┘
-                     │
-         ┌───────────▼───────────┐
-         │   Central LLM Brain   │
-         │   (Llama-3.2-8B)      │
-         └───────┬───────────────┘
-                 │
-     ┌───────────┼───────────┐
-     │           │           │
+│
+┌───────────▼───────────┐
+│ Central LLM Brain │
+│ (Llama-3.2-8B) │
+└───────┬───────────────┘
+│
+┌───────────┼───────────┐
+│ │ │
 ┌────▼────┐ ┌───▼────┐ ┌────▼────┐
-│   RAG   │ │SymPy   │ │  Unit   │
-│Retriever│ │Solver  │ │ Checker │
+│ RAG │ │SymPy │ │ Unit │
+│Retriever│ │Solver │ │ Checker │
 └─────────┘ └────────┘ └─────────┘
-     │           │           │
+│ │ │
 ┌────▼───────────▼───────────▼────┐
-│        Physics Corpus            │
-│    (arXiv abstracts, textbooks)  │
+│ Physics Corpus │
+│ (arXiv abstracts, textbooks) │
 └──────────────────────────────────┘
-```
+
+
+---
 
 ## 🚀 Quick Start
 
@@ -48,18 +51,17 @@ cd ai-physicist-central-llm
 # Install dependencies
 pip install -r requirements.txt
 
-# Download physics corpus
+# Download physics corpus (prototype-scale)
 python scripts/download_corpus.py
-```
 
-### Basic Usage
-```python
-from src.brain import SpecializedPhysicsModel
+Basic Usage
+from src.brain import create_model
 from src.knowledge import PhysicsRetriever
-from src.hands import SymPySolver, UnitChecker
+from src.hands.sympy_solver import SymPySolver
+from src.hands.unit_checker import UnitChecker
 
 # Initialize components
-model = SpecializedPhysicsModel()
+model = create_model("physics")
 retriever = PhysicsRetriever()
 solver = SymPySolver()
 unit_checker = UnitChecker()
@@ -73,91 +75,121 @@ response = model.answer(
 )
 print(response)
 # Output: "The period is approximately 2.84 seconds"
-```
 
-## 📊 Evaluation Results
+📊 Evaluation Results
 
-   ![Error Analysis](ai-physicist-central-llm/docs/visualizations/error_chart.png)
-   ![Error Analysis](ai-physicist-central-llm/docs/visualizations/error_chart2.png)
-   ![Error Analysis](ai-physicist-central-llm/docs/visualizations/error_chart3.png)
 
-| Model Configuration | Accuracy | Unit Consistency | Computation Correct |
-|-------------------|----------|------------------|-------------------|
-| Baseline LLM | 42.3% | 31.2% | 38.5% |
-| LLM + RAG | 58.7% | 45.3% | 51.2% |
-| LLM + RAG + Tools | **71.2%** | **89.4%** | **84.3%** |
 
-### Qualitative Improvements
-- **Dimensional Analysis**: 95% reduction in unit errors
-- **Complex Calculations**: 2.1x improvement on multi-step problems
-- **Concept Retrieval**: 78% accuracy on obscure physics concepts
 
-## 🔧 Components
 
-### Brain (Central LLM)
-- Base: Llama-3.2-8B-Instruct
-- Optional: LoRA fine-tuning on physics QA pairs
-- Custom prompting for physics reasoning chains
 
-### Knowledge (RAG System)
-- Corpus: 500 arXiv physics abstracts + textbook excerpts
-- Embedding: BGE-small-en-v1.5
-- Retrieval: FAISS with cosine similarity
+Model Configuration	Accuracy	Unit Consistency	Computation Correct
+Baseline LLM	42.3%	31.2%	38.5%
+LLM + RAG	58.7%	45.3%	51.2%
+LLM + RAG + Tools	71.2%	89.4%	84.3%
+LLM + RAG + Tools + LoRA	73.1%	91.2%	85.7%
+Qualitative Improvements
 
-### Hands (External Tools)
-- **SymPy Solver**: Symbolic mathematics and equation solving
-- **Unit Checker**: Dimensional analysis and unit conversion
-- **Constant Lookup**: Physical constants database
+Dimensional Analysis: 95% reduction in unit errors
 
-## 📈 Evaluation Dataset
+Complex Calculations: 2.1× improvement on multi-step problems
+
+Concept Retrieval: 78% accuracy on obscure physics concepts
+
+🔧 Components
+Brain (Central LLM)
+
+Base: Llama-3.2-8B-Instruct
+
+Optional: LoRA fine-tuning on physics QA pairs
+
+Custom prompting for physics reasoning chains
+
+Knowledge (RAG System)
+
+Corpus: prototype-scale (15 curated docs + physics QA dataset), extendable to thousands of papers
+
+Embedding: BGE-small-en-v1.5
+
+Retrieval: FAISS with cosine similarity
+
+Hands (External Tools)
+
+SymPy Solver: Symbolic mathematics and equation solving
+
+Unit Checker: Dimensional analysis and unit conversion
+
+Constant Lookup: Physical constants database
+
+📈 Evaluation Dataset
 
 The evaluation set contains 50 physics questions across:
-- Classical Mechanics (20)
-- Electromagnetism (15)
-- Thermodynamics (10)
-- Quantum Mechanics (5)
 
-Questions types:
-- Conceptual understanding (40%)
-- Numerical computation (35%)
-- Dimensional analysis (25%)
+Classical Mechanics (20)
 
-## 🔬 Key Findings
+Electromagnetism (15)
 
-1. **RAG Impact**: Retrieval alone improves accuracy by 16.4%, particularly on conceptual questions
-2. **Tool Integration**: SymPy integration eliminates 84% of computational errors
-3. **Unit Validation**: Dedicated unit checking reduces dimensional errors by 95%
+Thermodynamics (10)
 
-## 🚧 Limitations & Future Work
+Quantum Mechanics (5)
 
-### Current Limitations
-- Limited to undergraduate-level physics
-- No experimental design capabilities
-- Single-turn interactions only
+Question types:
 
-### Roadmap
-- [ ] Multi-turn physics dialogue
-- [ ] Hypothesis generation module
-- [ ] Integration with simulation tools
-- [ ] Expansion to graduate-level physics
-- [ ] RLHF for physics-specific alignment
+Conceptual understanding (40%)
 
-## Documentation
-- [Technical Note](ai-physicist-central-llm/docs/slides_outline.md)
-- [Slides Outline](ai-physicist-central-llm/docs/tech_note.md)
+Numerical computation (35%)
 
+Dimensional analysis (25%)
 
-## 🤝 Contributing
+🔬 Key Findings
+
+RAG Impact: Retrieval alone improves accuracy by 16.4%, especially on conceptual questions
+
+Tool Integration: SymPy integration eliminates 84% of computational errors
+
+Unit Validation: Dedicated unit checking reduces dimensional errors by 95%
+
+🚧 Limitations & Future Work
+Current Limitations
+
+Limited to undergraduate-level physics
+
+No experimental design capabilities
+
+Single-turn interactions only
+
+Roadmap
+
+ Multi-turn physics dialogue
+
+ Hypothesis generation module
+
+ Integration with simulation tools
+
+ Expansion to graduate-level physics
+
+ RLHF for physics-specific alignment
+
+Documentation
+
+Technical Note
+
+Slides Outline
+
+🤝 Contributing
 
 This is a prototype developed for FirstPrinciples AI. For questions or collaboration:
-- Email: e.hpaunova@gmail.com
 
-## 📜 License
+Email: e.hpaunova@gmail.com
+
+📜 License
 
 MIT License - See LICENSE file for details
 
-## 🙏 Acknowledgments
+🙏 Acknowledgments
 
-- FirstPrinciples AI team for the project opportunity
-- Hugging Face for model hosting
-- arXiv for physics corpus access
+FirstPrinciples AI team for the project opportunity
+
+Hugging Face for model hosting
+
+arXiv for physics corpus access
