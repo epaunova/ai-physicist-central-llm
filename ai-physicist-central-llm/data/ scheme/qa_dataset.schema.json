@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Physics QA Dataset",
+  "type": "object",
+  "required": ["physics_qa_dataset"],
+  "properties": {
+    "physics_qa_dataset": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "type", "question", "answer"],
+        "properties": {
+          "id": { "type": "integer", "minimum": 1 },
+          "category": {
+            "type": "string",
+            "enum": [
+              "classical_mechanics",
+              "electromagnetism",
+              "thermodynamics",
+              "quantum_mechanics",
+              "relativity",
+              "waves"
+            ]
+          },
+          "type": {
+            "type": "string",
+            "enum": ["conceptual", "numerical", "dimensional"]
+          },
+          "question": { "type": "string", "minLength": 5 },
+          "answer": { "type": "string", "minLength": 1 },
+          "solution": { "type": "string" },
+          "units_required": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+          },
+          "numerical_answer": { "type": ["number", "null"] },
+          "dimension_answer": { "type": ["string", "null"] },
+          "concepts": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": ["easy", "medium", "hard"],
+            "default": "medium"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false}
