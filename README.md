@@ -22,9 +22,10 @@ This project demonstrates a modular approach to specializing large language mode
 
 ### Performance Visualizations
 
-![Error Analysis](docs/visualizations/error_chart.png)
+   ![Error Analysis](ai-physicist-central-llm/docs/visualizations/error_chart.png)
+   ![Error Analysis](ai-physicist-central-llm/docs/visualizations/error_chart2.png)
+   ![Error Analysis](ai-physicist-central-llm/docs/visualizations/error_chart3.png)
 
-![Performance Comparison](docs/visualizations/error_chart2.png)
 
 ### Key Improvements
 - **95% reduction** in dimensional/unit errors
@@ -167,9 +168,10 @@ print(f"Accuracy: {result.accuracy:.1%}")
 
 ## Documentation
 
-- [Technical Note](docs/tech_note.md) - Detailed methodology
-- [Slides Outline](docs/slides_outline.md) - Presentation structure
-- [Visualizations](docs/visualizations/) - Performance charts
+- [Technical Note](ai-physicist-central-llm/docs/slides_outline.md)
+- [Slides Outline](ai-physicist-central-llm/docs/tech_note.md)
+
+
 
 ## Contributing
 
