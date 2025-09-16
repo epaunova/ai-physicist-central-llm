@@ -177,7 +177,7 @@ print(f"Accuracy: {result.accuracy:.1%}")
 
 This project was developed for FirstPrinciples. For questions or collaboration:
 - Email: e.hpaunova@gmail.com
-- GitHub: [@epaunova](https://github.com/epaunova)
+- GitHub: (https://github.com/epaunova)
 
 ## License
 
