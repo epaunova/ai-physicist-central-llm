@@ -1,6 +1,6 @@
-
 {
   "evaluation_date": "2024-09-17",
+  "generated_by": "demo_pipeline",
   "configurations_tested": [
     {
       "name": "Baseline LLM",
@@ -9,10 +9,10 @@
       "computation_accuracy": 0.385
     },
     {
-      "name": "LLM + RAG", 
+      "name": "LLM + RAG",
       "accuracy": 0.587,
       "unit_consistency": 0.453,
-      "computation_accuracy": 0.512
+      "computation_accuracy": 0.512"
     },
     {
       "name": "LLM + RAG + Tools",
@@ -29,4 +29,3 @@
     "78% accuracy on obscure physics concepts"
   ]
 }
-EOF
