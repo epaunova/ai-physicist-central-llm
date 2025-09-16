@@ -1,10 +1,51 @@
+# Byte-compiled / cache
 __pycache__/
 *.py[cod]
+*.so
+
+# Virtual env / local config
 .env
+.env.*
+.venv/
+venv/
 .vscode/
 .idea/
-*.log
+
+# OS junk
 .DS_Store
-data/results/*.csv
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# Logs / reports
+*.log
+*.tmp
+*.cache
+*.coverage
+.coverage.*
+
+# Data & results (keep raw small jsons you need; ignore heavy outputs)
+data/results/
+data/cache/
+data/*.parquet
+data/*.pickle
+data/*.pkl
+data/*.csv
+!data/corpus/physics_abstracts.json   # keep your demo corpus
+
+# Models / checkpoints
 models/
+checkpoints/
 *.bin
+*.pt
+*.safetensors
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# Test artifacts
+.pytest_cache/
