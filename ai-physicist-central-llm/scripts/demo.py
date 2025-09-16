@@ -11,9 +11,9 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.append(str(ROOT / "src"))
 
 # Import components
-from brain.specialized_model import PhysicsLLM
-from hands.sympy_solver import SymPySolver
-from hands.unit_checker import UnitChecker
+from src.brain.specialized_model import PhysicsLLM
+from src.hands.sympy_solver import SymPySolver
+from src.hands.unit_checker import UnitChecker
 from knowledge.physics_corpus import load_default_corpus
 
 def main():
