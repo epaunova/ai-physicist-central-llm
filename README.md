@@ -183,6 +183,9 @@ This project was developed for FirstPrinciples. For questions or collaboration:
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
+📦 Latest release: [v0.1](https://github.com/epaunova/ai-physicist-central-llm/releases/tag/v0.1)
+
+
 ---
 
 *"Combining the reasoning capabilities of LLMs with the precision of computational tools to advance physics problem-solving."*
